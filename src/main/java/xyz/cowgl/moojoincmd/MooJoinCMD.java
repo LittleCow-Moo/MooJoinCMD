@@ -15,7 +15,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.concurrent.TimeUnit;
 
 public class MooJoinCMD extends JavaPlugin implements Listener, TabCompleter {
 
@@ -75,7 +74,7 @@ public class MooJoinCMD extends JavaPlugin implements Listener, TabCompleter {
     }
 
     @EventHandler
-    public void onPlayerJoin(PlayerJoinEvent event) throws InterruptedException {
+    public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
         String command = Objects.requireNonNull(config.getString("joinCommand")).replace("%player%", player.getName());
         player.performCommand(command);
