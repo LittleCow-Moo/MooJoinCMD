@@ -1,0 +1,11 @@
+name: MooJoinCMD
+version: '${project.version}'
+main: xyz.cowgl.moojoincmd.MooJoinCMD
+api-version: '1.17'
+authors: [CowGL Development Team]
+website: https://cowgl.xyz
+commands:
+  rmoojoincmd:
+    description: Reload MooJoinCMD
+    usage: /rmoojoincmd
+    permission: moojoincmd.reload
